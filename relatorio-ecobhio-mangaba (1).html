@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relatório EcoBhio | Fazenda Mangaba — 5 Anos de Transformação Biológica</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-primary: #1B4332;
+  --color-primary-light: #2D6E45;
+  --color-primary-dark: #0F2A1F;
+  --color-accent: #C8A45A;
+  --color-accent-light: #E2C27A;
+  --color-bg: #F7F5F0;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #EFF0EB;
+  --color-border: #D9D5CC;
+  --color-text: #1C1C1A;
+  --color-text-muted: #6B6B5E;
+  --color-success: #2E7D52;
+  --color-warning: #D4A017;
+  --color-danger: #B84C3C;
+  --color-info: #2E5FA3;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(26,77,46,0.08);
+  overflow: hidden;
+}
+
+/* CAPA */
+.cover {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: white;
+  padding: 60px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(200,164,90,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.cover-tag {
+  display: inline-block;
+  background: rgba(200,164,90,0.2);
+  color: var(--color-accent-light);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border: 1px solid rgba(200,164,90,0.3);
+}
+
+.cover h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.cover h1 span {
+  color: var(--color-accent-light);
+}
+
+.cover-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  font-weight: 300;
+  max-width: 700px;
+  margin-bottom: 36px;
+}
+
+.cover-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.meta-item-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  opacity: 0.6;
+  margin-bottom: 4px;
+}
+
+.meta-item-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-accent-light);
+}
+
+/* CONTEÚDO */
+.content {
+  padding: 50px;
+}
+
+.section {
+  margin-bottom: 56px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.section-number {
+  background: var(--color-primary);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.section-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: -0.3px;
+}
+
+.section-intro {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+  max-width: 800px;
+}
+
+/* SUMÁRIO EXECUTIVO */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.summary-card {
+  background: var(--color-surface-alt);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 8px;
+  padding: 18px 16px;
+}
+
+.summary-card-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.summary-card-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+.summary-card-desc {
+  font-size: 0.82rem;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+/* CALLOUT DE DESTAQUE */
+.highlight-box {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: white;
+  padding: 28px 32px;
+  border-radius: 12px;
+  margin: 30px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-box::before {
+  content: '🏆';
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4rem;
+  opacity: 0.2;
+}
+
+.highlight-label {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-accent-light);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.highlight-text {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: 80%;
+}
+
+/* TABELA DE ÍNDICES */
+.indices-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  margin-bottom: 16px;
+}
+
+.indices-table thead {
+  background: var(--color-primary);
+  color: white;
+}
+
+.indices-table th {
+  padding: 14px 18px;
+  text-align: left;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.indices-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.92rem;
+}
+
+.indices-table tbody tr:nth-child(even) {
+  background: var(--color-surface-alt);
+}
+
+.indices-table tbody tr:hover {
+  background: rgba(26,77,46,0.04);
+}
+
+.indice-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.indice-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 200px;
+}
+
+.indice-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  border-radius: 4px;
+}
+
+.indice-bar-fill.reference {
+  background: var(--color-text-muted);
+  opacity: 0.5;
+}
+
+.indice-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  color: var(--color-primary);
+  min-width: 45px;
+}
+
+.badge-superior {
+  background: #E8F5EE;
+  color: var(--color-success);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-inferior {
+  background: #FEF9E7;
+  color: var(--color-accent-dark, #A07A30);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* MICROBIOTA - DUAS COLUNAS */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.microbiota-card {
+  background: var(--color-surface-alt);
+  border-radius: 10px;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+}
+
+.microbiota-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.microbiota-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 0.88rem;
+}
+
+.microbiota-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.microbiota-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1.2;
+}
+
+.mini-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+}
+
+.mini-bar-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 70px;
+  color: var(--color-text-muted);
+}
+
+.mini-bar-label.ecobhio-label {
+  color: var(--color-primary);
+}
+
+.mini-bar-track {
+  flex: 1;
+  height: 8px;
+  background: var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mini-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.mini-bar-fill.reference {
+  background: #B5B5A8;
+}
+
+.mini-bar-fill.ecobhio {
+  background: var(--color-primary);
+}
+
+.mini-bar-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  min-width: 50px;
+  text-align: right;
+}
+
+.mini-bar-value.ecobhio-value {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* LEGENDA DA SEÇÃO */
+.section-legend {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-surface-alt);
+  padding: 14px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid var(--color-border);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.legend-swatch {
+  width: 28px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.legend-swatch.reference {
+  background: #B5B5A8;
+}
+
+.legend-swatch.ecobhio {
+  background: var(--color-primary);
+}
+
+.legend-label-bold {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* DESTAQUE BRADYRHIZOBIUM */
+.bradyrhizobium-card {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 28px;
+  margin: 24px 0;
+  text-align: center;
+}
+
+.bradyrhizobium-label {
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-accent-light);
+  margin-bottom: 8px;
+}
+
+.bradyrhizobium-name {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.bradyrhizobium-value {
+  font-family: 'Fraunces', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-accent-light);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.bradyrhizobium-desc {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* CHIPS DE BACTÉRIAS */
+.bacteria-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.bacteria-chip {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-primary);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.bacteria-chip strong {
+  font-style: normal;
+  color: var(--color-primary);
+}
+
+/* FUNÇÕES ECOLÓGICAS */
+.ecological-functions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.function-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.function-check {
+  width: 22px;
+  height: 22px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* RISCO FUSARIUM */
+.risk-banner {
+  background: linear-gradient(135deg, #FDECEA 0%, #FFF5F3 100%);
+  border-left: 6px solid var(--color-danger);
+  padding: 24px 28px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.risk-icon {
+  font-size: 3rem;
+}
+
+.risk-content h4 {
+  font-family: 'Fraunces', serif;
+  color: var(--color-danger);
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.risk-value {
+  font-family: 'Fraunces', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-danger);
+  line-height: 1;
+}
+
+.risk-label {
+  font-size: 0.85rem;
+  color: var(--color-text);
+  margin-top: 4px;
+}
+
+.risk-detail {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 8px;
+}
+
+/* TABELA FUSARIUM */
+.species-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin-top: 12px;
+}
+
+.species-table th {
+  background: var(--color-primary);
+  color: white;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.species-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.species-table tr:nth-child(even) td {
+  background: var(--color-surface-alt);
+}
+
+.species-name {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.tag-saprofita { background: #E8F5EE; color: var(--color-success); padding: 3px 8px; border-radius: 10px; font-size: 0.72rem; font-weight: 600; }
+.tag-ciclagem { background: #FFF4D6; color: #A07A30; padding: 3px 8px; border-radius: 10px; font-size: 0.72rem; font-weight: 600; }
+.tag-neutro { background: #FEF9E7; color: #B89010; padding: 3px 8px; border-radius: 10px; font-size: 0.72rem; font-weight: 600; }
+.tag-patogeno { background: #FDECEA; color: var(--color-danger); padding: 3px 8px; border-radius: 10px; font-size: 0.72rem; font-weight: 600; }
+
+.tag-baixo { background: #E8F5EE; color: var(--color-success); padding: 3px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; }
+.tag-medio { background: #FEF9E7; color: #A07A30; padding: 3px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; }
+.tag-alto { background: #FDECEA; color: var(--color-danger); padding: 3px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; }
+
+/* NEMATOIDES */
+.nematodes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.nematode-risk-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.nematode-risk-card h5 {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.nematode-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--color-border);
+  font-size: 0.88rem;
+}
+
+.nematode-item:last-child { border-bottom: none; }
+
+.nematode-genus {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.risk-mini {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.risk-mini.baixo { background: #E8F5EE; color: var(--color-success); }
+.risk-mini.alto { background: #FDECEA; color: var(--color-danger); }
+
+/* GRÁFICO RADAR */
+.radar-container {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 28px;
+  align-items: center;
+  background: var(--color-surface-alt);
+  border-radius: 12px;
+  padding: 32px;
+  border: 1px solid var(--color-border);
+  margin-bottom: 24px;
+}
+
+.radar-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radar-chart {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  display: block;
+}
+
+.radar-legend {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.radar-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.radar-legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.radar-legend-dot.reference {
+  background: #B5B5A8;
+}
+
+.radar-legend-dot.ecobhio {
+  background: var(--color-primary);
+}
+
+.radar-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radar-summary-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.radar-stat {
+  background: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 4px solid var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+}
+
+.radar-stat-superior {
+  border-left-color: var(--color-success);
+}
+
+.radar-stat-construcao {
+  border-left-color: var(--color-warning);
+}
+
+.radar-stat-label {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.radar-stat-values {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+}
+
+.radar-stat-ref {
+  color: var(--color-text-muted);
+}
+
+.radar-stat-eco {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.radar-stat-arrow {
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 1000px) {
+  .radar-container {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+  .radar-chart {
+    max-width: 600px;
+  }
+}
+
+/* OPORTUNIDADES */
+.opportunities {
+  background: var(--color-surface-alt);
+  border-radius: 10px;
+  padding: 24px;
+  border-left: 4px solid var(--color-accent);
+}
+
+.opportunities h3 {
+  font-family: 'Fraunces', serif;
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.opportunity-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.opportunity-list li {
+  background: white;
+  padding: 14px 18px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px;
+  text-align: left;
+}
+
+.opportunity-list li > span {
+  flex: 1;
+  display: block;
+}
+
+.opportunity-list li::before {
+  content: '→';
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* CONCLUSÃO */
+.conclusion {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  color: white;
+  padding: 40px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.conclusion::before {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(200,164,90,0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.conclusion-label {
+  display: inline-block;
+  background: rgba(200,164,90,0.2);
+  color: var(--color-accent-light);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.conclusion h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  max-width: 750px;
+  line-height: 1.3;
+}
+
+.conclusion-pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.pillar {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 18px;
+  backdrop-filter: blur(10px);
+}
+
+.pillar-title {
+  font-family: 'Fraunces', serif;
+  font-size: 0.95rem;
+  color: var(--color-accent-light);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.pillar-text {
+  font-size: 0.82rem;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+.quote {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 24px;
+  margin-top: 24px;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  text-align: center;
+  color: var(--color-accent-light);
+}
+
+.quote::before { content: '"'; font-size: 2rem; margin-right: 4px; }
+.quote::after { content: '"'; font-size: 2rem; margin-left: 4px; }
+
+/* RODAPÉ */
+.footer {
+  background: var(--color-primary-dark);
+  color: rgba(255,255,255,0.7);
+  padding: 24px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.footer-brand {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  color: white;
+  font-size: 1rem;
+}
+
+.footer-brand span {
+  color: var(--color-accent-light);
+}
+
+@media (max-width: 768px) {
+  .content { padding: 30px 20px; }
+  .cover { padding: 40px 25px; }
+  .cover h1 { font-size: 1.8rem; }
+  .summary-grid { grid-template-columns: 1fr 1fr; }
+  .two-col { grid-template-columns: 1fr; }
+  .conclusion-pillars { grid-template-columns: 1fr 1fr; }
+  .opportunity-list { grid-template-columns: 1fr; }
+  .cover-meta { grid-template-columns: 1fr 1fr; }
+  .nematodes-grid { grid-template-columns: 1fr; }
+}
+
+@media print {
+  body { padding: 0; background: white; }
+  .container { box-shadow: none; }
+  .section { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- CAPA -->
+  <div class="cover">
+    <div class="cover-tag">Relatório Técnico-Comercial · EcoBhio</div>
+    <h1>5 anos de EcoBhio transformam o solo em um <span>sistema biologicamente ativo e supressivo</span></h1>
+    <p class="cover-subtitle">Análise comparativa de microbiota, função ecológica e indicadores de saúde do solo após cinco safras consecutivas de manejo com tecnologia EcoBhio.</p>
+
+    <div class="cover-meta">
+      <div>
+        <div class="meta-item-label">Relatório</div>
+        <div class="meta-item-value">PE-GOSOL-267</div>
+      </div>
+      <div>
+        <div class="meta-item-label">Fazenda</div>
+        <div class="meta-item-value">Mangaba · MetaComEco</div>
+      </div>
+      <div>
+        <div class="meta-item-label">Amostra</div>
+        <div class="meta-item-value">Go044297</div>
+      </div>
+      <div>
+        <div class="meta-item-label">Data</div>
+        <div class="meta-item-value">24/04/2026</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- SUMÁRIO EXECUTIVO -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">1</div>
+        <h2 class="section-title">Sumário Executivo</h2>
+      </div>
+      <p class="section-intro">Cinco indicadores funcionais que comprovam a instalação de um sistema biológico ativo, com microbiota estruturada e funções ecológicas operantes.</p>
+
+      <div class="summary-grid">
+        <div class="summary-card">
+          <div class="summary-card-label">01</div>
+          <div class="summary-card-title">Microbiota Ativa</div>
+          <div class="summary-card-desc">Solo com alta atividade biológica e funções essenciais estruturadas.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-card-label">02</div>
+          <div class="summary-card-title">Rede de Defesa</div>
+          <div class="summary-card-desc">Biocontrole instalado e diversidade funcional promovendo proteção.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-card-label">03</div>
+          <div class="summary-card-title">Ciclagem e Nutrição</div>
+          <div class="summary-card-desc">Fixação de N e ciclagem de nutrientes acima do nível de referência.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-card-label">04</div>
+          <div class="summary-card-title">Ação Nematicida</div>
+          <div class="summary-card-desc">Índice nematicida muito acima da referência, reduzindo a pressão.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-card-label">05</div>
+          <div class="summary-card-title">Evolução Contínua</div>
+          <div class="summary-card-desc">Efeito cumulativo: solo mais fértil, resiliente e produtivo ao longo do tempo.</div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Resultado-chave</div>
+        <div class="highlight-text">O solo tratado com EcoBhio supera a referência laboratorial em 3 dos 6 índices funcionais avaliados, com destaque para Nematicidas (0,65 → 0,80) e funções de promoção, fixação e nutrição estruturadas.</div>
+      </div>
+    </div>
+
+    <!-- ÍNDICES FUNCIONAIS -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">2</div>
+        <h2 class="section-title">Comparativo de Índices Funcionais</h2>
+      </div>
+      <p class="section-intro">Solo Comum (referência média laboratorial) vs Solo EcoBhio após 5 safras de manejo biológico contínuo.</p>
+
+      <div class="radar-container">
+
+        <div class="radar-wrapper">
+          <svg class="radar-chart" viewBox="0 0 700 600" xmlns="http://www.w3.org/2000/svg">
+
+            <!-- Gridlines concêntricas -->
+            <polygon points="350.0,270.0 389.1,288.8 398.7,331.1 371.7,365.0 328.3,365.0 301.3,331.1 310.9,288.8" fill="none" stroke="#D9D5CC" stroke-width="1" stroke-dasharray="3,3"/>
+            <polygon points="350.0,220.0 428.2,257.7 447.5,342.3 393.4,410.1 306.6,410.1 252.5,342.3 271.8,257.7" fill="none" stroke="#D9D5CC" stroke-width="1" stroke-dasharray="3,3"/>
+            <polygon points="350.0,170.0 467.3,226.5 496.2,353.4 415.1,455.1 284.9,455.1 203.8,353.4 232.7,226.5" fill="none" stroke="#D9D5CC" stroke-width="1" stroke-dasharray="3,3"/>
+            <polygon points="350.0,120.0 506.4,195.3 545.0,364.5 436.8,500.2 263.2,500.2 155.0,364.5 193.6,195.3" fill="none" stroke="#D9D5CC" stroke-width="1.5"/>
+
+            <!-- Eixos -->
+            <line x1="350" y1="320" x2="350.0" y2="120.0" stroke="#D9D5CC" stroke-width="1"/>
+            <line x1="350" y1="320" x2="506.4" y2="195.3" stroke="#D9D5CC" stroke-width="1"/>
+            <line x1="350" y1="320" x2="545.0" y2="364.5" stroke="#D9D5CC" stroke-width="1"/>
+            <line x1="350" y1="320" x2="436.8" y2="500.2" stroke="#D9D5CC" stroke-width="1"/>
+            <line x1="350" y1="320" x2="263.2" y2="500.2" stroke="#D9D5CC" stroke-width="1"/>
+            <line x1="350" y1="320" x2="155.0" y2="364.5" stroke="#D9D5CC" stroke-width="1"/>
+            <line x1="350" y1="320" x2="193.6" y2="195.3" stroke="#D9D5CC" stroke-width="1"/>
+
+            <!-- Escala numérica (no eixo vertical superior) -->
+            <text x="358" y="273" font-family="JetBrains Mono, monospace" font-size="11" fill="#9B9B8E">0,25</text>
+            <text x="358" y="223" font-family="JetBrains Mono, monospace" font-size="11" fill="#9B9B8E">0,50</text>
+            <text x="358" y="173" font-family="JetBrains Mono, monospace" font-size="11" fill="#9B9B8E">0,75</text>
+            <text x="358" y="123" font-family="JetBrains Mono, monospace" font-size="11" fill="#9B9B8E">1,00</text>
+
+            <!-- Polígono Solo Comum (referência) -->
+            <polygon points="350.0,160.0 462.6,230.2 492.3,352.5 411.6,447.9 282.3,460.6 223.3,348.9 215.5,212.8"
+                     fill="#B5B5A8" fill-opacity="0.20"
+                     stroke="#8A8A7A" stroke-width="2" stroke-dasharray="6,4"/>
+
+            <!-- Polígono Solo EcoBhio -->
+            <polygon points="350.0,158.0 467.3,226.5 482.6,350.3 404.7,433.5 289.3,446.1 194.0,355.6 243.7,235.2"
+                     fill="#1B4332" fill-opacity="0.38"
+                     stroke="#1B4332" stroke-width="3"/>
+
+            <!-- Pontos Solo Comum -->
+            <circle cx="350.0" cy="160.0" r="4" fill="#8A8A7A"/>
+            <circle cx="462.6" cy="230.2" r="4" fill="#8A8A7A"/>
+            <circle cx="492.3" cy="352.5" r="4" fill="#8A8A7A"/>
+            <circle cx="411.6" cy="447.9" r="4" fill="#8A8A7A"/>
+            <circle cx="282.3" cy="460.6" r="4" fill="#8A8A7A"/>
+            <circle cx="223.3" cy="348.9" r="4" fill="#8A8A7A"/>
+            <circle cx="215.5" cy="212.8" r="4" fill="#8A8A7A"/>
+
+            <!-- Pontos Solo EcoBhio -->
+            <circle cx="350.0" cy="158.0" r="7" fill="#C8A45A" stroke="#1B4332" stroke-width="2.5"/>
+            <circle cx="467.3" cy="226.5" r="7" fill="#C8A45A" stroke="#1B4332" stroke-width="2.5"/>
+            <circle cx="482.6" cy="350.3" r="7" fill="#C8A45A" stroke="#1B4332" stroke-width="2.5"/>
+            <circle cx="404.7" cy="433.5" r="7" fill="#C8A45A" stroke="#1B4332" stroke-width="2.5"/>
+            <circle cx="289.3" cy="446.1" r="7" fill="#C8A45A" stroke="#1B4332" stroke-width="2.5"/>
+            <circle cx="194.0" cy="355.6" r="7" fill="#C8A45A" stroke="#1B4332" stroke-width="2.5"/>
+            <circle cx="243.7" cy="235.2" r="7" fill="#C8A45A" stroke="#1B4332" stroke-width="2.5"/>
+
+            <!-- Valores numéricos EcoBhio (dourado com halo escuro para destaque) -->
+            <text x="350" y="148" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="#C8A45A" stroke="#0F2A1F" stroke-width="3.5" paint-order="stroke" text-anchor="middle">0,81</text>
+            <text x="476" y="220" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="#C8A45A" stroke="#0F2A1F" stroke-width="3.5" paint-order="stroke" text-anchor="middle">0,75</text>
+            <text x="492" y="354" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="#C8A45A" stroke="#0F2A1F" stroke-width="3.5" paint-order="stroke" text-anchor="middle">0,68</text>
+            <text x="414" y="437" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="#C8A45A" stroke="#0F2A1F" stroke-width="3.5" paint-order="stroke" text-anchor="middle">0,63</text>
+            <text x="279" y="450" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="#C8A45A" stroke="#0F2A1F" stroke-width="3.5" paint-order="stroke" text-anchor="middle">0,70</text>
+            <text x="184" y="359" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="#C8A45A" stroke="#0F2A1F" stroke-width="3.5" paint-order="stroke" text-anchor="middle">0,80</text>
+            <text x="234" y="239" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="#C8A45A" stroke="#0F2A1F" stroke-width="3.5" paint-order="stroke" text-anchor="middle">0,68</text>
+
+            <!-- Labels dos eixos -->
+            <text x="350" y="80" font-family="DM Sans, sans-serif" font-size="15" font-weight="600" fill="#1B4332" text-anchor="middle">Fixadoras de N</text>
+
+            <text x="540" y="170" font-family="DM Sans, sans-serif" font-size="15" font-weight="600" fill="#1B4332" text-anchor="start">Promotoras</text>
+            <text x="540" y="188" font-family="DM Sans, sans-serif" font-size="15" font-weight="600" fill="#1B4332" text-anchor="start">de Crescimento</text>
+
+            <text x="585" y="375" font-family="DM Sans, sans-serif" font-size="15" font-weight="600" fill="#1B4332" text-anchor="start">Solubilizadoras</text>
+
+            <text x="460" y="535" font-family="DM Sans, sans-serif" font-size="15" font-weight="600" fill="#1B4332" text-anchor="start">Fitormônios</text>
+
+            <text x="240" y="535" font-family="DM Sans, sans-serif" font-size="15" font-weight="600" fill="#1B4332" text-anchor="end">Biocontrole</text>
+
+            <text x="115" y="375" font-family="DM Sans, sans-serif" font-size="15" font-weight="600" fill="#1B4332" text-anchor="end">Nematicidas</text>
+
+            <text x="160" y="170" font-family="DM Sans, sans-serif" font-size="15" font-weight="600" fill="#1B4332" text-anchor="end">Diversidade</text>
+            <text x="160" y="188" font-family="DM Sans, sans-serif" font-size="15" font-weight="600" fill="#1B4332" text-anchor="end">Global</text>
+
+          </svg>
+
+          <div class="radar-legend">
+            <div class="radar-legend-item">
+              <div class="radar-legend-dot reference"></div>
+              <span>Solo Comum <small style="color: var(--color-text-muted)">(referência laboratorial)</small></span>
+            </div>
+            <div class="radar-legend-item">
+              <div class="radar-legend-dot ecobhio"></div>
+              <span style="font-weight: 700; color: var(--color-primary);">Solo EcoBhio · 5 anos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="radar-summary">
+          <div class="radar-summary-title">Leitura do gráfico</div>
+
+          <div class="radar-stat radar-stat-superior">
+            <div class="radar-stat-label">Fixadoras de N</div>
+            <div class="radar-stat-values">
+              <span class="radar-stat-ref">0,80</span>
+              <span class="radar-stat-arrow">→</span>
+              <span class="radar-stat-eco">0,81 ↑</span>
+            </div>
+          </div>
+
+          <div class="radar-stat radar-stat-superior">
+            <div class="radar-stat-label">Promotoras de Crescimento</div>
+            <div class="radar-stat-values">
+              <span class="radar-stat-ref">0,72</span>
+              <span class="radar-stat-arrow">→</span>
+              <span class="radar-stat-eco">0,75 ↑</span>
+            </div>
+          </div>
+
+          <div class="radar-stat radar-stat-superior">
+            <div class="radar-stat-label">Nematicidas</div>
+            <div class="radar-stat-values">
+              <span class="radar-stat-ref">0,65</span>
+              <span class="radar-stat-arrow">→</span>
+              <span class="radar-stat-eco">0,80 ↑↑</span>
+            </div>
+          </div>
+
+          <div class="radar-stat radar-stat-construcao">
+            <div class="radar-stat-label">Solubilizadoras</div>
+            <div class="radar-stat-values">
+              <span class="radar-stat-ref">0,73</span>
+              <span class="radar-stat-arrow">→</span>
+              <span class="radar-stat-eco" style="color: var(--color-warning)">0,68</span>
+            </div>
+          </div>
+
+          <div class="radar-stat radar-stat-construcao">
+            <div class="radar-stat-label">Fitormônios</div>
+            <div class="radar-stat-values">
+              <span class="radar-stat-ref">0,71</span>
+              <span class="radar-stat-arrow">→</span>
+              <span class="radar-stat-eco" style="color: var(--color-warning)">0,63</span>
+            </div>
+          </div>
+
+          <div class="radar-stat radar-stat-construcao">
+            <div class="radar-stat-label">Biocontrole</div>
+            <div class="radar-stat-values">
+              <span class="radar-stat-ref">0,78</span>
+              <span class="radar-stat-arrow">→</span>
+              <span class="radar-stat-eco" style="color: var(--color-warning)">0,70</span>
+            </div>
+          </div>
+
+          <div class="radar-stat radar-stat-construcao">
+            <div class="radar-stat-label">Diversidade Global</div>
+            <div class="radar-stat-values">
+              <span class="radar-stat-ref">0,86</span>
+              <span class="radar-stat-arrow">→</span>
+              <span class="radar-stat-eco" style="color: var(--color-warning)">0,68</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 10px;"><em>Referências laboratoriais: Diversidade 0,86 · Crescimento 0,72 · N 0,80 · Nutrientes 0,73 · Fitormônios 0,71 · Biocontrole 0,78 · Nematicidas 0,65</em></p>
+    </div>
+
+    <!-- COMPOSIÇÃO DA MICROBIOTA -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">3</div>
+        <h2 class="section-title">Composição da Microbiota</h2>
+      </div>
+      <p class="section-intro">Distribuição percentual dos principais filos bacterianos e grupos fúngicos identificados na análise metagenômica.</p>
+
+      <div class="section-legend">
+        <div class="legend-item">
+          <div class="legend-swatch reference"></div>
+          <span>Solo Comum <small style="color: var(--color-text-muted)">(referência média laboratorial)</small></span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-swatch ecobhio"></div>
+          <span class="legend-label-bold">Solo EcoBhio · 5 anos de manejo</span>
+        </div>
+      </div>
+
+      <div class="two-col">
+
+        <div class="microbiota-card">
+          <h3>Bactérias · Principais Filos</h3>
+
+          <div class="microbiota-row">
+            <div class="microbiota-name">Proteobacteria</div>
+            <div class="microbiota-bars">
+              <div class="mini-bar"><span class="mini-bar-label">Solo Comum</span><div class="mini-bar-track"><div class="mini-bar-fill reference" style="width: 22%"></div></div><span class="mini-bar-value">22%</span></div>
+              <div class="mini-bar"><span class="mini-bar-label ecobhio-label">EcoBhio</span><div class="mini-bar-track"><div class="mini-bar-fill ecobhio" style="width: 36.4%"></div></div><span class="mini-bar-value ecobhio-value">36,4%</span></div>
+            </div>
+          </div>
+
+          <div class="microbiota-row">
+            <div class="microbiota-name">Actinobacteriota</div>
+            <div class="microbiota-bars">
+              <div class="mini-bar"><span class="mini-bar-label">Solo Comum</span><div class="mini-bar-track"><div class="mini-bar-fill reference" style="width: 13%"></div></div><span class="mini-bar-value">13%</span></div>
+              <div class="mini-bar"><span class="mini-bar-label ecobhio-label">EcoBhio</span><div class="mini-bar-track"><div class="mini-bar-fill ecobhio" style="width: 24%"></div></div><span class="mini-bar-value ecobhio-value">24,0%</span></div>
+            </div>
+          </div>
+
+          <div class="microbiota-row">
+            <div class="microbiota-name">Acidobacteriota</div>
+            <div class="microbiota-bars">
+              <div class="mini-bar"><span class="mini-bar-label">Solo Comum</span><div class="mini-bar-track"><div class="mini-bar-fill reference" style="width: 6%"></div></div><span class="mini-bar-value">6%</span></div>
+              <div class="mini-bar"><span class="mini-bar-label ecobhio-label">EcoBhio</span><div class="mini-bar-track"><div class="mini-bar-fill ecobhio" style="width: 9.2%"></div></div><span class="mini-bar-value ecobhio-value">9,2%</span></div>
+            </div>
+          </div>
+
+          <div class="microbiota-row">
+            <div class="microbiota-name">Firmicutes <small style="color: var(--color-text-muted)">(inclui Bacillus)</small></div>
+            <div class="microbiota-bars">
+              <div class="mini-bar"><span class="mini-bar-label">Solo Comum</span><div class="mini-bar-track"><div class="mini-bar-fill reference" style="width: 3%"></div></div><span class="mini-bar-value">3%</span></div>
+              <div class="mini-bar"><span class="mini-bar-label ecobhio-label">EcoBhio</span><div class="mini-bar-track"><div class="mini-bar-fill ecobhio" style="width: 5.2%"></div></div><span class="mini-bar-value ecobhio-value">5,2%</span></div>
+            </div>
+          </div>
+
+          <div class="microbiota-row">
+            <div class="microbiota-name">Chloroflexota</div>
+            <div class="microbiota-bars">
+              <div class="mini-bar"><span class="mini-bar-label">Solo Comum</span><div class="mini-bar-track"><div class="mini-bar-fill reference" style="width: 2%"></div></div><span class="mini-bar-value">2%</span></div>
+              <div class="mini-bar"><span class="mini-bar-label ecobhio-label">EcoBhio</span><div class="mini-bar-track"><div class="mini-bar-fill ecobhio" style="width: 4%"></div></div><span class="mini-bar-value ecobhio-value">4,0%</span></div>
+            </div>
+          </div>
+
+          <div class="microbiota-row">
+            <div class="microbiota-name">Outros</div>
+            <div class="microbiota-bars">
+              <div class="mini-bar"><span class="mini-bar-label">Solo Comum</span><div class="mini-bar-track"><div class="mini-bar-fill reference" style="width: 54%"></div></div><span class="mini-bar-value">54%</span></div>
+              <div class="mini-bar"><span class="mini-bar-label ecobhio-label">EcoBhio</span><div class="mini-bar-track"><div class="mini-bar-fill ecobhio" style="width: 21.2%"></div></div><span class="mini-bar-value ecobhio-value">21,2%</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="microbiota-card">
+          <h3>Fungos · Principais Grupos</h3>
+
+          <div class="microbiota-row">
+            <div class="microbiota-name"><em>Fusarium spp.</em></div>
+            <div class="microbiota-bars">
+              <div class="mini-bar"><span class="mini-bar-label">Solo Comum</span><div class="mini-bar-track"><div class="mini-bar-fill reference" style="width: 15%"></div></div><span class="mini-bar-value">15%</span></div>
+              <div class="mini-bar"><span class="mini-bar-label ecobhio-label">EcoBhio</span><div class="mini-bar-track"><div class="mini-bar-fill ecobhio" style="width: 34.76%"></div></div><span class="mini-bar-value ecobhio-value">34,76%</span></div>
+            </div>
+          </div>
+
+          <div class="microbiota-row">
+            <div class="microbiota-name"><em>Clonostachys rosea</em></div>
+            <div class="microbiota-bars">
+              <div class="mini-bar"><span class="mini-bar-label">Solo Comum</span><div class="mini-bar-track"><div class="mini-bar-fill reference" style="width: 0.5%"></div></div><span class="mini-bar-value">0,5%</span></div>
+              <div class="mini-bar"><span class="mini-bar-label ecobhio-label">EcoBhio</span><div class="mini-bar-track"><div class="mini-bar-fill ecobhio" style="width: 5.58%"></div></div><span class="mini-bar-value ecobhio-value">5,58%</span></div>
+            </div>
+          </div>
+
+          <div class="microbiota-row">
+            <div class="microbiota-name"><em>Trichoderma spp.</em></div>
+            <div class="microbiota-bars">
+              <div class="mini-bar"><span class="mini-bar-label">Solo Comum</span><div class="mini-bar-track"><div class="mini-bar-fill reference" style="width: 0.8%"></div></div><span class="mini-bar-value">0,8%</span></div>
+              <div class="mini-bar"><span class="mini-bar-label ecobhio-label">EcoBhio</span><div class="mini-bar-track"><div class="mini-bar-fill ecobhio" style="width: 0.95%"></div></div><span class="mini-bar-value ecobhio-value">0,95%</span></div>
+            </div>
+          </div>
+
+          <div class="microbiota-row">
+            <div class="microbiota-name"><em>Talaromyces spp.</em></div>
+            <div class="microbiota-bars">
+              <div class="mini-bar"><span class="mini-bar-label">Solo Comum</span><div class="mini-bar-track"><div class="mini-bar-fill reference" style="width: 0.3%"></div></div><span class="mini-bar-value">0,3%</span></div>
+              <div class="mini-bar"><span class="mini-bar-label ecobhio-label">EcoBhio</span><div class="mini-bar-track"><div class="mini-bar-fill ecobhio" style="width: 0.64%"></div></div><span class="mini-bar-value ecobhio-value">0,64%</span></div>
+            </div>
+          </div>
+
+          <div class="microbiota-row">
+            <div class="microbiota-name"><em>Chaetomium spp.</em></div>
+            <div class="microbiota-bars">
+              <div class="mini-bar"><span class="mini-bar-label">Solo Comum</span><div class="mini-bar-track"><div class="mini-bar-fill reference" style="width: 0.2%"></div></div><span class="mini-bar-value">0,2%</span></div>
+              <div class="mini-bar"><span class="mini-bar-label ecobhio-label">EcoBhio</span><div class="mini-bar-track"><div class="mini-bar-fill ecobhio" style="width: 0.40%"></div></div><span class="mini-bar-value ecobhio-value">0,40%</span></div>
+            </div>
+          </div>
+
+          <div class="microbiota-row">
+            <div class="microbiota-name">Outros</div>
+            <div class="microbiota-bars">
+              <div class="mini-bar"><span class="mini-bar-label">Solo Comum</span><div class="mini-bar-track"><div class="mini-bar-fill reference" style="width: 83.2%"></div></div><span class="mini-bar-value">83,2%</span></div>
+              <div class="mini-bar"><span class="mini-bar-label ecobhio-label">EcoBhio</span><div class="mini-bar-track"><div class="mini-bar-fill ecobhio" style="width: 57.67%"></div></div><span class="mini-bar-value ecobhio-value">57,67%</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ASSINATURA BIOLÓGICA -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">4</div>
+        <h2 class="section-title">Assinatura Biológica EcoBhio</h2>
+      </div>
+      <p class="section-intro">Destaques exclusivos do solo tratado: bactérias-chave, biocontroladores e funções ecológicas instaladas.</p>
+
+      <div class="bradyrhizobium-card">
+        <div class="bradyrhizobium-label">Indicador EcoBhio</div>
+        <div class="bradyrhizobium-name">Bradyrhizobium sp.</div>
+        <div class="bradyrhizobium-value">10,934%</div>
+        <div class="bradyrhizobium-desc">Presença massiva — marca da fixação biológica de nitrogênio instalada pelo manejo EcoBhio.</div>
+      </div>
+
+      <div class="two-col" style="margin-top: 24px;">
+
+        <div>
+          <h3 style="font-family: 'Fraunces', serif; color: var(--color-primary); font-size: 1.15rem; margin-bottom: 12px;">Bactérias-Chave</h3>
+          <div class="bacteria-chips">
+            <div class="bacteria-chip"><strong>Bacillus spp.</strong> · presença expressiva</div>
+            <div class="bacteria-chip"><strong>Paenibacillus spp.</strong> · presença expressiva</div>
+            <div class="bacteria-chip"><strong>Streptomyces spp.</strong> · abundância elevada (Actinobactérias)</div>
+            <div class="bacteria-chip"><strong>Azospirillum spp.</strong> · presença relevante</div>
+            <div class="bacteria-chip"><strong>Micromonospora spp.</strong> · presença relevante</div>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-family: 'Fraunces', serif; color: var(--color-primary); font-size: 1.15rem; margin-bottom: 12px;">Biocontroladores-Chave</h3>
+          <div class="bacteria-chips">
+            <div class="bacteria-chip"><strong>Clonostachys rosea</strong> · 5,579% <span style="color: var(--color-success); font-weight: 700; font-size: 0.7rem;">(ALTÍSSIMO)</span></div>
+            <div class="bacteria-chip"><strong>Trichoderma spp.</strong> · 0,954%</div>
+            <div class="bacteria-chip"><strong>Chaetomium spp.</strong> · 0,401%</div>
+            <div class="bacteria-chip"><strong>Purpureocillium spp.</strong> · 0,456%</div>
+            <div class="bacteria-chip"><strong>Arthrobotrys spp.</strong> · nematicida natural</div>
+            <div class="bacteria-chip"><strong>Metarhizium rileyi</strong> · presença detectada</div>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 style="font-family: 'Fraunces', serif; color: var(--color-primary); font-size: 1.15rem; margin: 28px 0 12px;">Funções Ecológicas Instaladas</h3>
+      <div class="ecological-functions">
+        <div class="function-item"><div class="function-check">✓</div>Fixação biológica de nitrogênio</div>
+        <div class="function-item"><div class="function-check">✓</div>Promoção de crescimento</div>
+        <div class="function-item"><div class="function-check">✓</div>Solubilização de nutrientes</div>
+        <div class="function-item"><div class="function-check">✓</div>Biocontrole natural</div>
+        <div class="function-item"><div class="function-check">✓</div>Ação nematicida</div>
+        <div class="function-item"><div class="function-check">✓</div>Produção de fitormônios</div>
+        <div class="function-item"><div class="function-check">✓</div>Degradação e ciclagem de MO</div>
+      </div>
+    </div>
+
+    <!-- FUSARIUM -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">5</div>
+        <h2 class="section-title">Fusarium · Classificação por Função Ecológica</h2>
+      </div>
+      <p class="section-intro">Análise crítica: a presença de saprófitas e espécies de ciclagem é natural e importante, mas o sistema ainda está em disputa biológica com os patógenos.</p>
+
+      <div class="risk-banner">
+        <div class="risk-icon">⚠️</div>
+        <div class="risk-content">
+          <h4>Risco de Fusariose</h4>
+          <div class="risk-value">0,96</div>
+          <div class="risk-label"><strong>Muito Alto</strong></div>
+          <div class="risk-detail">Patógeno causador: <strong>95,94%</strong> · Agravantes: <strong>85,94%</strong></div>
+        </div>
+      </div>
+
+      <table class="species-table">
+        <thead>
+          <tr>
+            <th>Espécie</th>
+            <th>% no Solo</th>
+            <th>Classificação Ecológica</th>
+            <th>Função / Papel Provável</th>
+            <th>Nível de Risco</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="species-name">Fusarium spp.</td>
+            <td><strong>34,756%</strong></td>
+            <td><span class="tag-saprofita">Saprófitas</span></td>
+            <td>Decompositores de matéria orgânica (palhada, resíduos), decomposição.</td>
+            <td><span class="tag-baixo">Baixo</span></td>
+          </tr>
+          <tr>
+            <td class="species-name">Fusarium algeriense</td>
+            <td><strong>1,657%</strong></td>
+            <td><span class="tag-ciclagem">Ciclagem</span></td>
+            <td>Atuação em ciclagem de nutrientes e decomposição.</td>
+            <td><span class="tag-baixo">Baixo</span></td>
+          </tr>
+          <tr>
+            <td class="species-name">Fusarium phyllophilum</td>
+            <td><strong>1,998%</strong></td>
+            <td><span class="tag-neutro">Neutros / Oportunistas</span></td>
+            <td>Podem atuar como saprófitas, mas tornar-se oportunistas em estresse.</td>
+            <td><span class="tag-medio">Médio</span></td>
+          </tr>
+          <tr>
+            <td class="species-name">Fusarium brachygibbosum</td>
+            <td><strong>0,068%</strong></td>
+            <td><span class="tag-patogeno">Patogênicos</span></td>
+            <td>Potencial patogênico em várias culturas.</td>
+            <td><span class="tag-alto">Alto</span></td>
+          </tr>
+          <tr>
+            <td class="species-name">Fusarium verticillioides</td>
+            <td><strong>0,026%</strong></td>
+            <td><span class="tag-patogeno">Patogênicos</span></td>
+            <td>Patógeno de grãos (milho) e podridões.</td>
+            <td><span class="tag-alto">Alto</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- NEMATOIDES -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">6</div>
+        <h2 class="section-title">Nematoides · Atenção e Controle Funcional</h2>
+      </div>
+      <p class="section-intro">Identificação de gêneros e índice de ação nematicida funcional do solo tratado.</p>
+
+      <div class="nematodes-grid">
+
+        <div class="nematode-risk-card">
+          <h5>Índices de Risco</h5>
+          <div class="nematode-item">
+            <span>Nematoide espiralado</span>
+            <span class="risk-mini baixo">Risco 0,57</span>
+          </div>
+          <div class="nematode-item">
+            <span>Nematoide-das-lesões · <em>Pratylenchus</em></span>
+            <span class="risk-mini alto">Risco 0,96</span>
+          </div>
+
+          <div style="margin-top: 18px; padding-top: 18px; border-top: 2px solid var(--color-accent); background: linear-gradient(135deg, rgba(46,125,82,0.08) 0%, transparent 100%); padding: 16px; border-radius: 8px;">
+            <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-text-muted); margin-bottom: 4px;">Índice Nematicida Funcional</div>
+            <div style="font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 700; color: var(--color-success); line-height: 1;">0,80</div>
+            <div style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 4px;">acima da referência alta de 0,65</div>
+          </div>
+        </div>
+
+        <div class="nematode-risk-card">
+          <h5>Principais Gêneros Identificados</h5>
+          <div class="nematode-item"><span class="nematode-genus">Acrobeloides sp.</span><small style="color: var(--color-text-muted);">maioria · vida livre</small></div>
+          <div class="nematode-item"><span class="nematode-genus">Helicotylenchus dihystera</span></div>
+          <div class="nematode-item"><span class="nematode-genus">Helicotylenchus sp.</span></div>
+          <div class="nematode-item"><span class="nematode-genus">Pratylenchus sp.</span></div>
+          <div class="nematode-item"><span class="nematode-genus">Pratylenchus brachyurus</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- OPORTUNIDADES -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">7</div>
+        <h2 class="section-title">Oportunidades para a Próxima Fase</h2>
+      </div>
+
+      <div class="opportunities">
+        <h3>Plano de evolução do sistema biológico</h3>
+        <ul class="opportunity-list">
+          <li><span>Aumentar eficiência dos biocontroles contra <em>Fusarium</em> e nematoides.</span></li>
+          <li><span>Melhorar condições agronômicas (palhada, aeração, umidade, rotação).</span></li>
+          <li><span>Estimular micorrizas e diversidade fúngica.</span></li>
+          <li><span>Consolidar equilíbrio ecológico e estabilidade do sistema.</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CONCLUSÃO -->
+  <div class="conclusion">
+    <div class="conclusion-label">Conclusão Estratégica</div>
+    <h2>Este case demonstra que a aplicação contínua da tecnologia EcoBhio reprograma o solo, criando um sistema biológico ativo, resiliente e produtivo.</h2>
+
+    <div class="conclusion-pillars">
+      <div class="pillar">
+        <div class="pillar-title">Função, não apenas diversidade</div>
+        <div class="pillar-text">EcoBhio constrói solo com microbiota ativa, funcional e estruturada.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-title">Solo Supressivo em construção</div>
+        <div class="pillar-text">Rede de biocontroles e Actinobactérias instalada e atuante.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-title">Nutrição e Ciclagem fortalecidas</div>
+        <div class="pillar-text">Fixação biológica de N e ciclagem acima do nível de referência.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-title">Resiliência aumentada</div>
+        <div class="pillar-text">Índice nematicida muito acima da referência, reduzindo impactos.</div>
+      </div>
+    </div>
+
+    <div class="quote">O solo deixou de ser dependente e passou a ser responsivo. Tecnologia que atua hoje, beneficia amanhã e multiplica no tempo.</div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <div class="footer">
+    <div class="footer-brand">ECOBHIO. <span>Engenharia Biológica do Solo.</span></div>
+    <div>Soluções Biológicas para uma Agricultura Regenerativa</div>
+  </div>
+
+</div>
+
+</body>
+</html>
